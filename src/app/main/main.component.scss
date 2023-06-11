@@ -1,0 +1,111 @@
+/* styles.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f5f5f5;
+$text-color: #333;
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0 0 0;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .label{
+    display: flex;
+    width: 70%;
+    font-weight: 500;
+    .name{
+      margin: 0 0 0 50px;
+
+      width: 80%;
+    }
+    .rating{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      cursor: pointer;
+    }
+  }
+  .bank-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    width: 70%;
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      transition: 0.1s;
+      border-radius: 5px;
+      &:hover{
+        cursor: pointer;
+        opacity: 70%;
+
+      }
+      .bank-name {
+        flex-grow: 1;
+        font-weight: 700;
+        color: #3498db;
+        width: 80%;
+
+      }
+      .bank-rating-container{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bank-rating {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $secondary-color;
+          color: #fff;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          font-weight: 700;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 5px;
+  }
+
+  .logo {
+    img {
+      max-width: 150px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="container">
+  <main class="main">
+    <h1>Головні банківські віділення Вінниці</h1>
+    <div class="label">
+      <div class="name">Назва</div>
+      <div class="rating"   (click)="sortByRating()"> Рейтинг</div>
+    </div>
+    <ul class="bank-list">
+      <li (click)="location.href = bank.router" *ngFor="let bank of banks">
+        <div class="bank-name">{{bank.name}}</div>
+        <div class="bank-rating-container">
+          <div class="bank-rating">{{bank.rating}}</div>
+        </div>
+      </li >
+    </ul>
+  </main>
+</div>
